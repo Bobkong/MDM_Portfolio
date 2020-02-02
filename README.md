@@ -6,15 +6,15 @@ I chose the five projects I have done before, including Android development, bac
 
 Feca is an Android application which uses face recognition technology. Its main features are virtual makeup test, makeup forum, etc. The software has won the National First Prize and the Most Investment Value Award. I am the captain of a five-man team, product manager and Android developer.
 
-<img src="./assets/images/feca_poster.jpg" style="width: 300px" />
+<div align=center><img src="./assets/images/feca_poster.jpg" style="width: 300px" align="center"/></div>
 
 <center>Feca poster</center>
 
-<img src="./assets/images/feca_forum.png" style="width: 300px"/>
+<div align=center><img src="./assets/images/feca_forum.png" style="width: 300px" align="center"/></div>
 
 <center>makeup forum</center>
 
-<img src="./assets/images/feca_test.png" style="width: 300px"/>
+<div align=center><img src="./assets/images/feca_test.png" style="width: 300px" align="center"/></div>
 
 <center>makeup test</center>
 
@@ -694,9 +694,11 @@ Im2hungry is a project that I developed in the intern competition during my inte
 
 Our team is made up of 11 people, including product manager, UI designer, android developer, back-end developer, test engineer and food recognition algorithm engineer. I am responsible for android development.
 
-<video src="./assets/images/im2hungry_video.mov" controls="controls" width="960" height="480">
-Your browser does not support the video tag.
-</video>
+<div align=center>
+  <video src="./assets/images/im2hungry_video.mov" controls="controls" width="960" height="480" align="center">
+  Your browser does not support the video tag.
+  </video>
+</div>
 
 <center>Video Introduction Of Im2hungry</center>
 
@@ -1283,19 +1285,25 @@ HealthHelper is an Android application developed by my graduation design. Its ma
 
 As shown in the figure, various data of the human body are displayed, such as BMI value, body age, visceral fat registration, basal metabolism, fat rate, muscle rate, protein rate, moisture, skeletal muscle, etc.
 
-<img src="./assets/images/health_helper_report_list.png" style="width: 300px"/>
+<div align=center><img src="./assets/images/health_helper_report_list.png" style="width: 300px" align="center"/></div>
 
 <center>measurement main page</center>
 
-<img src="./assets/images/health_helper_report_detail.png" style="width: 300px"/>
+<div align=center><img src="./assets/images/health_helper_report_detail.png" style="width: 300px" align="center"/></div>
 
 <center>physical report with suggestions</center>
 
-<img src="./assets/images/health_helper_message_list.png" style="width: 300px"/>
+<div align=center><img src="./assets/images/health_helper_message_list.png" style="width: 300px" align="center"/></div>
 
 <center>chatroom main page</center>
 
-<img src="./assets/images/health_helper_instant_message.png" style="width: 300px"/>
+<div align="center">
+
+<div align=center><img src="./assets/images/health_helper_instant_message.png" style="width: 300px"/></div>
+
+
+
+</div>
 
 <center>chatroom</center>
 
