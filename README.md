@@ -1,14 +1,16 @@
 # Welcome to my portfolio
 
-I chose the five projects I have done before, including Android development, back-end development, python algorithm implementation, and cocos-2d development.
-
-[TOC]
+I choose five projects I have done before. I think these five projects can reflect my ability of Android development, back-end development, database development, cocos2d development and python development, and I sort them in chronological order.
 
 ## 1.Feca(Android)
 
 ### 1.1 Project Introduction
 
-Feca is an Android application which uses face recognition technology. Its main features are virtual makeup test, makeup forum, etc. The software has won the National First Prize and the Most Investment Value Award. I am the captain of a five-man team, product manager and Android developer.
+I was studying in Silicon Valley in 2017 summer, and my sister asked me to go to outlets to buy lipstick for her, but she did not know which lipstick was suitable for her, because she cannot apply those lipstick to her lips, so she just picked one randomly. Unfortunately, the result was bad. The lipstick I bought did not suit her at all. 
+
+Inspired by the unpleasant experience, I developed FECA, which is an android software that uses face recognition technology to help users try virtual makeup. I named FECA by changing the position of the letters ‘a’ and ‘e’ of the word “face”, and it means making some changes on your face. It is worth mentioning that I attended the “Catch” National College Students Internet Software Design Contest and my entry is FECA, and I won the first prize in the national final and attracted investment, which was high recognition of FECA. I am the captain of a five-man team, product manager and Android developer.
+
+The main function of FECA is virtual makeup Users can upload a photo and then try different cosmetics such as lipstick, eye shadow, blush, etc. By using FECA, they can figure out what is the best cosmetics for them without going to the mall. Another main function of this software is the makeup forum. In the forum, users can post his/her makeup diary, share the results of using different cosmetics and recommend cosmetics.
 
 <center><img src="./assets/images/feca_poster.jpg" style="width: 300px"/></center>
 <center>Feca poster</center>
@@ -223,9 +225,9 @@ public class MakeupActivity extends AppCompatActivity {
 
 ### 2.1 Project Introduction
 
-PlantVsZombie is a project made in my cocos2d course, inspired by two games that I love very much: Super Mario and Plants vs. Zombies. I used Super Mary's game play mechanics and the character skills of Plants vs Zombies to create this game. This is a four-player team game. I am mainly responsible for game design and cocos2d development.
+PlantVsZombie is a game developed in my cocos2d course, inspired by two games that I love very much: Super Mario and Plants vs. Zombies. I created this game by combining Super Mary's game play mechanics and the character skills of Plants vs Zombies. I worked in a four-man team, and I was mainly responsible for game design and cocos2d development.
 
-The rule of the game: press the W/A/D to move the plant, press the J key to attack zombies, press the K key to switch the plant, press the L key to use the collected sunlight to revive the plant, press Enter/ESC: pause the game.
+The rule of the game is very simple. Users can press the W/A/D key to move the plant, press the J key to attack zombies, press the K key to switch the plant, press the L key to use the collected sunlight to revive the plant, press Enter/ESC to pause/play the game.
 
 <img src="./assets/images/plantvszombies_guide.png" style="width: 2500px"/>
 
@@ -235,7 +237,7 @@ The rule of the game: press the W/A/D to move the plant, press the J key to atta
 
 ### 2.2 Original Code
 
-The following code mainly shows how to initialize the scene and add keyboard listeners which can perform character movement, character attack, character switch, option box popup event, etc.
+The following code mainly shows how I initialize the scene and add keyboard listeners which can perform character movement, character attack, character switch, option box popup event, etc.
 
 ```c++
 cocos2d::Scene * ZVP::createScene(GameConfig config)
@@ -696,9 +698,9 @@ void ZVP::boom(Sprite *player) {
 
 ### 3.1 Project Introduction
 
-Im2hungry is a project that I developed in the intern competition during my internship at Tencent. The software won the gold award in the competition. As the name suggests, Im2hungry is a food recommendation app based on LBS. It also uses AI technology to support the calorie recognition function of food. Our goal is to allow users to choose foods they want to eat nearby when browsing the food posts.
+Im2hungry is an Android application that I developed in the intern competition during my internship at Tencent. Im2hungry is a food recommendation app based on LBS. We also used AI technology to support the calorie recognition function of food. Our goal is to allow users to choose foods they want to eat nearby when they browse the food posts.
 
-Our team is made up of 11 people, including product manager, UI designer, android developer, back-end developer, test engineer and food recognition algorithm engineer. I am responsible for android development.
+Our team is made up of 10 members, including product manager, UI designer, android developer, back-end developer, test engineer and food recognition algorithm engineer. I am responsible for android development.
 
 <center>
   <video src="./assets/images/im2hungry_video.mov" controls="controls" width="960" height="480" align="center">
@@ -709,7 +711,7 @@ Our team is made up of 11 people, including product manager, UI designer, androi
 <center>Video Introduction Of Im2hungry</center>
 ### 3.2 Original Code
 
-In order to make it easier for users to find delicious food,  I proposed to tthe product manager to add geographic location services, that is, to include geographic location information in users posts. This proposal has been unanimously approved by the team members. I chose to use Tencent Maps SDK to provide map services.
+In order to make it easier for users to find delicious food,  I proposed to tthe product manager to include geographic location information in users posts. This proposal was unanimously approved by my team members, and I chose to use Tencent Maps SDK to provide map services.
 
 ```java
 public class LocationService {
@@ -771,8 +773,6 @@ private String getDistance(PostInfo postInfo) {
     }
 ```
 
-Class for calculating distance
-
 ```java
 public class CalculateDistance {
     public static int algorithm(double longitude1, double latitude1, double longitude2, double latitude2) {
@@ -804,7 +804,7 @@ public class CalculateDistance {
 }
 ```
 
-Show the location on the map according to its latitude and longitude and mark it with red markers
+Show the location on the map according to its latitude and longitude and mark it with red markers.
 
 ```java
 
@@ -884,8 +884,6 @@ public class LocationSeeActivity extends AppCompatActivity {
 This experiment uses a random forest algorithm. The data comes from kaggle. The training dataset is given M = 1719692 samples, the sample form is {(X1, y1), (X2, y2) ... (XM, yM)}, where Xj = {xji | i = 1,2, ... N} is a real vector of N = 201 dimensions, yj is 1 or 0, which is the classification label: 1 means the sample is a positive sample, 0 means the sample is a negative sample; The test data set is given M = 429923 samples, and the classification labels of the samples are required.
 
 A forest is created randomly. There are many decision trees in the forest. Each decision tree in the random forest is not related to others and is a relatively weak classifier. However, after combining many trees, the forest has a very strong classification ability. When a new input sample enters, let each decision tree in the forest judge separately to see which label this sample should belong to, and then see which label is selected the most, and then make prediction.
-
-另外我还使用了multiprocessing来增加运算的速度
 
 ### 4.2 Original Code
 
@@ -1294,21 +1292,22 @@ with open('result.txt','w') as fw:
 
 ### 5.1 Project Introduction
 
-Health Helper is an Android application developed by my graduation design. Its main function is to measure various human data, health news, health forum, and instant messaging. In this project I was responsible for the development of the measurement and instant messaging functions on the Android side, as well as the back-end development.
+Health Helper is my graduation project. As its name suggests, It provides health services. The user only needs to stand on the body fat scale provided by us, and the body fat scale will transmit the user's body data to the his/her mobile phone app through Bluetooth communication. In addition, Health Helper has other main features, including health advice, latest health news, health forum, and instant messaging. In this project I was responsible for the development of the measurement and instant messaging features on the Android-end, and the whole back-end and database development.
 
-As shown in the figure, various data of the human body are displayed, such as BMI value, body age, visceral fat registration, basal metabolism, fat rate, muscle rate, protein rate, moisture, skeletal muscle, etc.
+As shown in the following screenshot, various data of the human body are displayed, such as BMI value, body age, visceral fat grade, basal metabolism, fat rate, muscle rate, protein rate, skeletal muscle, etc.
 
-<div align=center><img src="./assets/images/health_helper_report_list.png" style="width: 300px" align="center"/></div>
+<center><img src="./assets/images/health_helper_report_list.png" style="width: 300px" align="center"/></center>
 <center>measurement main page</center>
-<div align=center><img src="./assets/images/health_helper_report_detail.png" style="width: 300px" align="center"/></div>
-<center>physical report with suggestions</center>
+<center><img src="./assets/images/health_helper_report_detail.png" style="width: 300px" align="center"/></center>
+<center>physical report with advice</center>
 <center><img src="./assets/images/health_helper_message_list.png" style="width: 300px" align="center"/></center>
 <center>chatroom main page</center>
 <center><img src="./assets/images/health_helper_instant_message.png" style="width: 300px"/></center>
 <center>chatroom</center>
+
 ### 5.2 Original Code
 
-下面的代码展示了如何通过蓝牙搜寻体脂秤设备，配对设备，连接设备的过程。
+The following code shows how to search for a body fat scale device via Bluetooth, pair the device, and connect the device.
 
 ```java
 public class MeasureDeviceHolder extends RecyclerView.ViewHolder {
@@ -1420,13 +1419,13 @@ public class MeasureDeviceHolder extends RecyclerView.ViewHolder {
 
 ```
 
-因为是合作开发项目，所以我将后台服务器和数据库部署到了云服务器上，方便其他人可以随时请求后台数据。
+Because it is a cooperative development project, I deployed the background server and database to the cloud server so that other developers can request back-end data at any time.
 
 <img src="./assets/images/health_server_info.png" style="width: 3000px"/>
 
 <img src="./assets/images/health_server_web.png" style="width: 2000px"/>
 
-下面是后端代码，首先是app.js文件，该文件是项目入口及程序启动文件。
+The following is the code of the back-end `app.js` file, which is the program startup file.
 
 ```javascript
 var createError = require('http-errors');
