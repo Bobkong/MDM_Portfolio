@@ -6,13 +6,17 @@ I chose the five projects I have done before, including Android development, bac
 
 Feca is an Android application which uses face recognition technology. Its main features are virtual makeup test, makeup forum, etc. The software has won the National First Prize and the Most Investment Value Award. I am the captain of a five-man team, product manager and Android developer.
 
+<img src="./assets/images/feca_poster.jpg" style="width: 300px" />
 
-
-
+<center>Feca poster</center>
 
 <img src="./assets/images/feca_forum.png" style="width: 300px"/>
 
+<center>makeup forum</center>
+
 <img src="./assets/images/feca_test.png" style="width: 300px"/>
+
+<center>makeup test</center>
 
 I used retrofit + rxjava to send network requests. This way, I can code the network requests by chain style, and it is very convenient for developers to switch threads. Firstly, before the network request, the uploaded bitmap needs to be converted into a base64 format string, and this step takes time to calculate, so it is done in the computation thread. Secondly, the network request is done in the io thread. This can ensure that multiple threads perform their duties, and main thread won't be blocked by time-consuming operations.
 
@@ -88,7 +92,7 @@ public class FaceDetectService {
 }
 ```
 
-下面这个类描述了人脸的各个器官的关键点，可以使用给出的关键点，从而描绘出器官的形状，为后续的上色做准备。
+The following class describes the key points of organs of the human faces in the uploaded photo. You can use the given key points to describe the shape of the organs.
 
 ```java
 // network response
@@ -168,7 +172,7 @@ public class DetectedFaces {
 }
 ```
 
-下面是上色的函数，其中根据上嘴唇和下嘴唇的关键点画出了轮廓。
+Below is the makeup function.
 
 ```java
     @Override
@@ -219,13 +223,15 @@ public class MakeupActivity extends AppCompatActivity {
 
 PlantVsZombie is a project made in my cocos2d course, inspired by two games that I love very much: Super Mario and Plants vs. Zombies. I used Super Mary's game play mechanics and the character skills of Plants vs Zombies to create this game. This is a four-player team game. I am mainly responsible for game design and cocos2d development.
 
+The rule of the game: press the W/A/D to move the plant, press the J key to attack zombies, press the K key to switch the plant, press the L key to use the collected sunlight to revive the plant, press Enter/ESC: pause the game.
+
 <img src="./assets/images/plantvszombies_guide.png" style="width: 2500px"/>
 
 <img src="./assets/images/plantvszombies_level1.png" style="width: 2500px"/>
 
 <img src="./assets/images/plantvszombies_level2.png" style="width: 2500px"/>
 
-下面的代码主要展示了是如何初始化界面以及写按键事件的，其中事件包括角色移动，角色攻击，弹出选项框等。
+The following code mainly shows how to initialize the scene and add keyboard listeners which can perform character movement, character attack, character switch, option box popup event, etc.
 
 ```c++
 cocos2d::Scene * ZVP::createScene(GameConfig config)
@@ -275,7 +281,6 @@ bool ZVP::init()
 	}
 
 	CCLOG(FileUtils::getInstance()->getDefaultResourceRootPath().c_str());
-	//FileUtils::getInstance()->setDefaultResourceRootPath("E:\\YiBin\\cocos\\OurRPG\\Resources\\");
 
 	visibleSize = Director::getInstance()->getVisibleSize();
 
@@ -465,7 +470,7 @@ void ZVP::onPlayerKeyPressed(int i, EventKeyboard::KeyCode code, Event * event) 
 		break;
 	}
 	case KeyCode::KEY_K: {
-		//切换植物
+		//switch character
 		if (playerInfo->plantCount() <= 1) {
 			break;
 		}
@@ -477,7 +482,7 @@ void ZVP::onPlayerKeyPressed(int i, EventKeyboard::KeyCode code, Event * event) 
 		break;
 	}
 	case KeyCode::KEY_L:
-		//复活植物
+		//revive character
 		if (plantInfo.healthPoint > 0 || plantInfo.isFrozen || playerInfo->sunlight < plantInfo.requiredSunlight) {
 			break;
 		}
@@ -488,7 +493,7 @@ void ZVP::onPlayerKeyPressed(int i, EventKeyboard::KeyCode code, Event * event) 
 		plantInfo.healthPoint = plantInfo.totalHealthPoint;
 		break;
 	case KeyCode::KEY_I: {
-		//测试：生成一堆僵尸
+		//for test：create some zombies
 		string zombies[] = { "Zombie", "Ballon", "Gargantuar", "Snowman", "Spaceman", "CurlyHair", "Imp", "Diver", "Tie", "Conehead" };
 		for (int i = 0; i < 10; i++) {
 			auto zombie = createZombie(zombies[i]);
@@ -499,7 +504,7 @@ void ZVP::onPlayerKeyPressed(int i, EventKeyboard::KeyCode code, Event * event) 
 		break;
 	}
 	case KeyCode::KEY_O: {
-		//作弊: 加血
+		//cheat: increase health point
 		plantInfo.healthPoint++;
 		break;
 	}
@@ -685,9 +690,17 @@ void ZVP::boom(Sprite *player) {
 
 ### Im2hungry(Android)
 
-Im2hungry is a project that I developed in the intern competition during my internship at Tencent. The software won the gold award in the competition. As the name suggests, the software is related to food. Its main functions are food recognition, calorie calculation, food Forum, etc. Our team is made up of 11 people, including product managers, UI designer, android developers, back-end developers, test engineer and food recognition algorithm engineers, I am responsible for android development.
+Im2hungry is a project that I developed in the intern competition during my internship at Tencent. The software won the gold award in the competition. As the name suggests, Im2hungry is a food recommendation app based on LBS. It also uses AI technology to support the calorie recognition function of food. Our goal is to allow users to choose foods they want to eat nearby when browsing the food posts.
 
-我们使用了我们腾讯地图提供的地图SDK
+Our team is made up of 11 people, including product manager, UI designer, android developer, back-end developer, test engineer and food recognition algorithm engineer. I am responsible for android development.
+
+<video src="./assets/images/im2hungry_video.mov" controls="controls" width="960" height="480">
+Your browser does not support the video tag.
+</video>
+
+<center>Video Introduction Of Im2hungry</center>
+
+In order to make it easier for users to find delicious food,  I proposed to tthe product manager to add geographic location services, that is, to include geographic location information in users posts. This proposal has been unanimously approved by the team members. I chose to use Tencent Maps SDK to provide map services.
 
 ```java
 public class LocationService {
@@ -736,7 +749,7 @@ public class LocationService {
 }
 ```
 
-计算该动态中所含的位置信息与用户当前位置的距离
+Calculate the distance between the location information contained in the post and the user's current location.
 
 ```java
 private String getDistance(PostInfo postInfo) {
@@ -749,42 +762,40 @@ private String getDistance(PostInfo postInfo) {
     }
 ```
 
-计算距离的工具类
+Class for calculating distance
 
 ```java
 public class CalculateDistance {
     public static int algorithm(double longitude1, double latitude1, double longitude2, double latitude2) {
 
-        double Lat1 = rad(latitude1); // 纬度
+        double Lat1 = rad(latitude1);
 
         double Lat2 = rad(latitude2);
 
-        double a = Math.abs(Lat1 - Lat2);//两点纬度之差
+        double a = Math.abs(Lat1 - Lat2);//Latitude difference between two points
 
-        double b = Math.abs(rad(longitude1) - rad(longitude2)); //经度之差
+        double b = Math.abs(rad(longitude1) - rad(longitude2)); //Longtitude difference between two points
 
         double s = 2 * Math.asin(Math
 
-                .sqrt(Math.pow(Math.sin(a / 2), 2) + Math.cos(Lat1) * Math.cos(Lat2) * Math.pow(Math.sin(b / 2), 2)));//计算两点距离的公式
+                .sqrt(Math.pow(Math.sin(a / 2), 2) + Math.cos(Lat1) * Math.cos(Lat2) * Math.pow(Math.sin(b / 2), 2)));//Formula for calculating the distance between two points
 
-        s = s * 6378137.0;//弧长乘地球半径（半径为米）
+        s = s * 6378137.0;//Arc length times Earth radius (radius in meters)
 
-        s = Math.round(s * 10000d) / 10000d;//精确距离的数值
+        s = Math.round(s * 10000d) / 10000d;
 
         return (int)s;
 
     }
 
-
-
     private static double rad(double d) {
-        return d * Math.PI / 180.00; //角度转换成弧度
+        return d * Math.PI / 180.00; //Convert angles to radians
     }
 
 }
 ```
 
-在地图上根据经纬度展示某位置并使用记号标出
+Show the location on the map according to its latitude and longitude and mark it with red markers
 
 ```java
 
@@ -796,7 +807,7 @@ public class LocationSeeActivity extends AppCompatActivity {
 
     private AMapLocationClient mLocationClient = null;
     private AMapLocationClientOption mLocationOption = null;
-    private LocationSource.OnLocationChangedListener mListener = null;//定位监听器
+    private LocationSource.OnLocationChangedListener mListener = null;
     private Marker locationMarker = null;
     private EditText mSearchEditText;
 
@@ -835,9 +846,6 @@ public class LocationSeeActivity extends AppCompatActivity {
         mapView.onResume();
     }
 
-    /**
-     * 方法必须重写
-     */
     @Override
     protected void onPause() {
         super.onPause();
@@ -851,7 +859,7 @@ public class LocationSeeActivity extends AppCompatActivity {
     }
 
     /**
-     * 设置amap属性
+     * set amap attributes
      */
     private void setUpMap() {
         LatLng curLatlng = new LatLng(lat, lng);
@@ -860,13 +868,13 @@ public class LocationSeeActivity extends AppCompatActivity {
 }
 ```
 
-
-
 ### Random Forest(Python)
 
 This experiment uses a random forest algorithm. The data comes from kaggle. The training dataset is given M = 1719692 samples, the sample form is {(X1, y1), (X2, y2) ... (XM, yM)}, where Xj = {xji | i = 1,2, ... N} is a real vector of N = 201 dimensions, yj is 1 or 0, which is the classification label: 1 means the sample is a positive sample, 0 means the sample is a negative sample; The test data set is given M = 429923 samples, and the classification labels of the samples are required.
 
 A forest is created randomly. There are many decision trees in the forest. Each decision tree in the random forest is not related to others and is a relatively weak classifier. However, after combining many trees, the forest has a very strong classification ability. When a new input sample enters, let each decision tree in the forest judge separately to see which label this sample should belong to, and then see which label is selected the most, and then make prediction.
+
+另外我还使用了multiprocessing来增加运算的速度
 
 ```python
 from multiprocessing import Process,Pool,Manager
@@ -1269,17 +1277,29 @@ with open('result.txt','w') as fw:
         fw.write(str(x)+','+str(res[x])+'\n')
 ```
 
-###HealthHelper(Android + javascript)
+###HealthHelper(Android + Back-end)
 
-healthhelper是我毕业设计开发的安卓应用，其主要功能测量人体各项数据，健康咨询，健康论坛，即时通讯。在该项目中我负责安卓端的测量功能和即时通讯功能的开发，以及后端开发。
+HealthHelper is an Android application developed by my graduation design. Its main function is to measure various human data, health news, health forum, and instant messaging. In this project I was responsible for the development of the measurement and instant messaging functions on the Android side, as well as the back-end development.
+
+As shown in the figure, various data of the human body are displayed, such as BMI value, body age, visceral fat registration, basal metabolism, fat rate, muscle rate, protein rate, moisture, skeletal muscle, etc.
 
 <img src="./assets/images/health_helper_report_list.png" style="width: 300px"/>
 
+<center>measurement main page</center>
+
 <img src="./assets/images/health_helper_report_detail.png" style="width: 300px"/>
+
+<center>physical report with suggestions</center>
 
 <img src="./assets/images/health_helper_message_list.png" style="width: 300px"/>
 
+<center>chatroom main page</center>
+
 <img src="./assets/images/health_helper_instant_message.png" style="width: 300px"/>
+
+<center>chatroom</center>
+
+下面的代码展示了如何通过蓝牙搜寻体脂秤设备，配对设备，连接设备的过程。
 
 ```java
 public class MeasureDeviceHolder extends RecyclerView.ViewHolder {
@@ -1385,17 +1405,6 @@ public class MeasureDeviceHolder extends RecyclerView.ViewHolder {
 		public void onReceiveWeightData_A3(WeightData_A3 weightData_a3) {
 			super.onReceiveWeightData_A3(weightData_a3);
 			Logger.d("MeasureFragment",weightData_a3.toString());
-			//add data
-
-			/*MeasureService.getMeasureService().addMeasure()
-					.observeOn(AndroidSchedulers.mainThread())
-					.subscribe(response -> {
-						if (response.getSuccess()){
-							Log.d(TAG,"add measure data success");
-						}else{
-							Log.d(TAG,"add measure data fails");
-						}
-					},Throwable::printStackTrace);*/
 		}
 	};
 }
@@ -1408,7 +1417,7 @@ public class MeasureDeviceHolder extends RecyclerView.ViewHolder {
 
 <img src="./assets/images/health_server_web.png" style="width: 2000px"/>
 
-下面是后端代码，首先是app.js文件
+下面是后端代码，首先是app.js文件，该文件是项目入口及程序启动文件。
 
 ```javascript
 var createError = require('http-errors');
@@ -1471,9 +1480,11 @@ module.exports = app;
 
 ```
 
-我还使用了mysql来持久化存储数据，下面是数据库的E-R图，包括用户信息，测量数据信息，健康论坛信息，健康咨询信息等数据。
+I also used mysql to store the data persistently. Below is the E-R diagram of the database, including user information, measurement data, health question information, health news information, etc.
 
 <img src="./assets/images/health_helper_sql.png" style="width: 3000px"/>
+
+Here is `mysql_client.js`, which is responsible for verifying and connecting to the mysql database.
 
 ```javascript
 var mysql = require('mysql');
@@ -1512,7 +1523,7 @@ Object.defineProperty(mysql_client, "conn", {
 module.exports = mysql_client;
 ```
 
-我挑选了健康问答模块的后端代码文件，其中有根据id获取答案，根据日期获取最新答案，根据问题id获取答案，获取最热答案，获取某用户发布的答案等。
+I selected the back-end code of the health question and answer module, which includes getting the answer based on the id, the latest answers based on the date, the answers based on the question id, the hottest answers, and the answers posted by a specific user.
 
 ```javascript
 let client = require('../storage/mysql_client');
