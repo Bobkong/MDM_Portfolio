@@ -1,8 +1,25 @@
+#### Table of contents
+- [Welcome to my portfolio](#Welcome-to-my-portfolio)
+    
+    - [1. Feca(Android)](#1.-Feca(Android))
+        - [1.1 Project Introduction](#1.1-Project-Introduction)
+        - [1.2 Original Code](#1.2-Original-Code)
+    - [2. PlantVsZombie(cocos2d)](#2.-PlantVsZombie(cocos2d))
+        - [2.1 Project Introduction](#2.1-Project-Introduction)
+        - [2.2 Original Code](#2.2-Original-Code)
+    - [3. Im2hungry(Android)](#3.-Im2hungry(Android))
+        - [3.1 Project Introduction](#3.1-Project-Introduction)
+        - [3.2 Original Code](#3.2-Original-Code)
+    - [4. Random Forest(Python)](#4.-Random-Forest(Python))
+        - [4.1 Project Introduction](#4.1-Project-Introduction)
+        - [4.2 Original Code](#4.2-Original-Code)
+    
+    - [5. Health Helper(Android + Back-end)](#5.-Health-Helper(Android-+-Back-end))
+        - [5.1 Project Introduction](#5.1-Project-Introduction)
+        - [5.2 Original Code](#5.2-Original-Code)
 #Welcome to my portfolio
 
 I chose the five projects I have done before, including Android development, back-end development, python algorithm implementation, and cocos-2d development.
-
-[TOC]
 
 ##1. Feca(Android)
 
@@ -11,17 +28,11 @@ I chose the five projects I have done before, including Android development, bac
 Feca is an Android application which uses face recognition technology. Its main features are virtual makeup test, makeup forum, etc. The software has won the National First Prize and the Most Investment Value Award. I am the captain of a five-man team, product manager and Android developer.
 
 <center><img src="./assets/images/feca_poster.jpg" style="width: 300px"/></center>
-
 <center>Feca poster</center>
-
 <center><img src="./assets/images/feca_forum.png" style="width: 300px"/></center>
-
 <center>makeup forum</center>
-
 <center><img src="./assets/images/feca_test.png" style="width: 300px"/></center>
-
 <center>makeup test</center>
-
 ###1.2 Original Code
 
 I used retrofit + rxjava to send network requests. This way, I can code the network requests by chain style, and it is very convenient for developers to switch threads. Firstly, before the network request, the uploaded bitmap needs to be converted into a base64 format string, and this step takes time to calculate, so it is done in the computation thread. Secondly, the network request is done in the io thread. This can ensure that multiple threads perform their duties, and main thread won't be blocked by time-consuming operations.
@@ -713,7 +724,6 @@ Our team is made up of 11 people, including product manager, UI designer, androi
 </center>
 
 <center>Video Introduction Of Im2hungry</center>
-
 ###3.2 Original Code
 
 In order to make it easier for users to find delicious food,  I proposed to tthe product manager to add geographic location services, that is, to include geographic location information in users posts. This proposal has been unanimously approved by the team members. I chose to use Tencent Maps SDK to provide map services.
@@ -1306,21 +1316,13 @@ Health Helper is an Android application developed by my graduation design. Its m
 As shown in the figure, various data of the human body are displayed, such as BMI value, body age, visceral fat registration, basal metabolism, fat rate, muscle rate, protein rate, moisture, skeletal muscle, etc.
 
 <div align=center><img src="./assets/images/health_helper_report_list.png" style="width: 300px" align="center"/></div>
-
 <center>measurement main page</center>
-
 <div align=center><img src="./assets/images/health_helper_report_detail.png" style="width: 300px" align="center"/></div>
-
 <center>physical report with suggestions</center>
-
 <center><img src="./assets/images/health_helper_message_list.png" style="width: 300px" align="center"/></center>
-
 <center>chatroom main page</center>
-
 <center><img src="./assets/images/health_helper_instant_message.png" style="width: 300px"/></center>
-
 <center>chatroom</center>
-
 ###5.2 Original Code
 
 下面的代码展示了如何通过蓝牙搜寻体脂秤设备，配对设备，连接设备的过程。
@@ -1701,4 +1703,7 @@ function setReturn(result){
 
 module.exports = answer;
 ```
+
+
+
 
