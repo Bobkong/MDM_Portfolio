@@ -1,29 +1,12 @@
-#### Table of contents
-- [Welcome to my portfolio](#Welcome-to-my-portfolio)
-    
-    - [1. Feca(Android)](#1.-Feca(Android))
-        - [1.1 Project Introduction](#1.1-Project-Introduction)
-        - [1.2 Original Code](#1.2-Original-Code)
-    - [2. PlantVsZombie(cocos2d)](#2.-PlantVsZombie(cocos2d))
-        - [2.1 Project Introduction](#2.1-Project-Introduction)
-        - [2.2 Original Code](#2.2-Original-Code)
-    - [3. Im2hungry(Android)](#3.-Im2hungry(Android))
-        - [3.1 Project Introduction](#3.1-Project-Introduction)
-        - [3.2 Original Code](#3.2-Original-Code)
-    - [4. Random Forest(Python)](#4.-Random-Forest(Python))
-        - [4.1 Project Introduction](#4.1-Project-Introduction)
-        - [4.2 Original Code](#4.2-Original-Code)
-    
-    - [5. Health Helper(Android + Back-end)](#5.-Health-Helper(Android-+-Back-end))
-        - [5.1 Project Introduction](#5.1-Project-Introduction)
-        - [5.2 Original Code](#5.2-Original-Code)
-#Welcome to my portfolio
+# Welcome to my portfolio
 
 I chose the five projects I have done before, including Android development, back-end development, python algorithm implementation, and cocos-2d development.
 
-##1. Feca(Android)
+[TOC]
 
-###1.1 Project Introduction
+## 1.Feca(Android)
+
+### 1.1 Project Introduction
 
 Feca is an Android application which uses face recognition technology. Its main features are virtual makeup test, makeup forum, etc. The software has won the National First Prize and the Most Investment Value Award. I am the captain of a five-man team, product manager and Android developer.
 
@@ -33,7 +16,7 @@ Feca is an Android application which uses face recognition technology. Its main 
 <center>makeup forum</center>
 <center><img src="./assets/images/feca_test.png" style="width: 300px"/></center>
 <center>makeup test</center>
-###1.2 Original Code
+### 1.2 Original Code
 
 I used retrofit + rxjava to send network requests. This way, I can code the network requests by chain style, and it is very convenient for developers to switch threads. Firstly, before the network request, the uploaded bitmap needs to be converted into a base64 format string, and this step takes time to calculate, so it is done in the computation thread. Secondly, the network request is done in the io thread. This can ensure that multiple threads perform their duties, and main thread won't be blocked by time-consuming operations.
 
@@ -236,9 +219,9 @@ public class MakeupActivity extends AppCompatActivity {
 }
 ```
 
-##2. PlantVsZombie(cocos2d)
+## 2. PlantVsZombie(cocos2d)
 
-###2.1 Project Introduction
+### 2.1 Project Introduction
 
 PlantVsZombie is a project made in my cocos2d course, inspired by two games that I love very much: Super Mario and Plants vs. Zombies. I used Super Mary's game play mechanics and the character skills of Plants vs Zombies to create this game. This is a four-player team game. I am mainly responsible for game design and cocos2d development.
 
@@ -250,7 +233,7 @@ The rule of the game: press the W/A/D to move the plant, press the J key to atta
 
 <img src="./assets/images/plantvszombies_level2.png" style="width: 2500px"/>
 
-###2.2 Original Code
+### 2.2 Original Code
 
 The following code mainly shows how to initialize the scene and add keyboard listeners which can perform character movement, character attack, character switch, option box popup event, etc.
 
@@ -709,9 +692,9 @@ void ZVP::boom(Sprite *player) {
 }
 ```
 
-##3. Im2hungry(Android)
+## 3. Im2hungry(Android)
 
-###3.1 Project Introduction
+### 3.1 Project Introduction
 
 Im2hungry is a project that I developed in the intern competition during my internship at Tencent. The software won the gold award in the competition. As the name suggests, Im2hungry is a food recommendation app based on LBS. It also uses AI technology to support the calorie recognition function of food. Our goal is to allow users to choose foods they want to eat nearby when browsing the food posts.
 
@@ -724,7 +707,7 @@ Our team is made up of 11 people, including product manager, UI designer, androi
 </center>
 
 <center>Video Introduction Of Im2hungry</center>
-###3.2 Original Code
+### 3.2 Original Code
 
 In order to make it easier for users to find delicious food,  I proposed to tthe product manager to add geographic location services, that is, to include geographic location information in users posts. This proposal has been unanimously approved by the team members. I chose to use Tencent Maps SDK to provide map services.
 
@@ -894,9 +877,9 @@ public class LocationSeeActivity extends AppCompatActivity {
 }
 ```
 
-##4. Random Forest(Python)
+## 4. Random Forest(Python)
 
-###4.1 Project Introduction
+### 4.1 Project Introduction
 
 This experiment uses a random forest algorithm. The data comes from kaggle. The training dataset is given M = 1719692 samples, the sample form is {(X1, y1), (X2, y2) ... (XM, yM)}, where Xj = {xji | i = 1,2, ... N} is a real vector of N = 201 dimensions, yj is 1 or 0, which is the classification label: 1 means the sample is a positive sample, 0 means the sample is a negative sample; The test data set is given M = 429923 samples, and the classification labels of the samples are required.
 
@@ -904,7 +887,7 @@ A forest is created randomly. There are many decision trees in the forest. Each 
 
 另外我还使用了multiprocessing来增加运算的速度
 
-###4.2 Original Code
+### 4.2 Original Code
 
 ```python
 from multiprocessing import Process,Pool,Manager
@@ -1307,9 +1290,9 @@ with open('result.txt','w') as fw:
         fw.write(str(x)+','+str(res[x])+'\n')
 ```
 
-##5. Health Helper(Android + Back-end)
+## 5. Health Helper(Android + Back-end)
 
-###5.1 Project Introduction
+### 5.1 Project Introduction
 
 Health Helper is an Android application developed by my graduation design. Its main function is to measure various human data, health news, health forum, and instant messaging. In this project I was responsible for the development of the measurement and instant messaging functions on the Android side, as well as the back-end development.
 
@@ -1323,7 +1306,7 @@ As shown in the figure, various data of the human body are displayed, such as BM
 <center>chatroom main page</center>
 <center><img src="./assets/images/health_helper_instant_message.png" style="width: 300px"/></center>
 <center>chatroom</center>
-###5.2 Original Code
+### 5.2 Original Code
 
 下面的代码展示了如何通过蓝牙搜寻体脂秤设备，配对设备，连接设备的过程。
 
