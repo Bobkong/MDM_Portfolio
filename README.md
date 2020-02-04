@@ -6,11 +6,9 @@ I choose five projects I have done before. I think these five projects can refle
 
 ### 1.1 Project Introduction
 
-I was studying in Silicon Valley in 2017 summer, and my sister asked me to go to outlets to buy lipstick for her, but she did not know which lipstick was suitable for her, because she cannot apply those lipstick to her lips, so she just picked one randomly. Unfortunately, the result was bad. The lipstick I bought did not suit her at all. 
+Feca is an android software that uses face recognition technology to help users try virtual makeup. I named Feca by changing the position of the letters ‘a’ and ‘e’ of the word “face”, and it means making some changes on your face. It is worth mentioning that I attended the “Catch” National College Students Internet Software Design Contest and my entry is Feca, and I won the first prize in the national final and attracted investment, which was high recognition of Feca.
 
-Inspired by the unpleasant experience, I developed FECA, which is an android software that uses face recognition technology to help users try virtual makeup. I named FECA by changing the position of the letters ‘a’ and ‘e’ of the word “face”, and it means making some changes on your face. It is worth mentioning that I attended the “Catch” National College Students Internet Software Design Contest and my entry is FECA, and I won the first prize in the national final and attracted investment, which was high recognition of FECA. I am the captain of a five-man team, product manager and Android developer.
-
-The main function of FECA is virtual makeup Users can upload a photo and then try different cosmetics such as lipstick, eye shadow, blush, etc. By using FECA, they can figure out what is the best cosmetics for them without going to the mall. Another main function of this software is the makeup forum. In the forum, users can post his/her makeup diary, share the results of using different cosmetics and recommend cosmetics.
+The main function of Feca is virtual makeup Users can upload a photo and then try different cosmetics such as lipstick, eye shadow, blush, etc. By using Feca, they can figure out what is the best cosmetics for them without going to the mall. Another main function of this software is the makeup forum. In the forum, users can post his/her makeup diary, share the results of using different cosmetics and recommend cosmetics.
 
 <center><img src="./assets/images/feca_poster.jpg" style="width: 300px"/></center>
 <center>Feca poster</center>
@@ -18,7 +16,15 @@ The main function of FECA is virtual makeup Users can upload a photo and then tr
 <center>makeup forum</center>
 <center><img src="./assets/images/feca_test.png" style="width: 300px"/></center>
 <center>makeup test</center>
-### 1.2 Original Code
+### 1.2 My Contributions
+
+-  I am the leader of a five-man team, product manager and Android developer.
+- Designed product features
+- Built Android project architecture
+- Developed network request module
+- Identified key points of face organs by using Tencent Youtu API and develoeped lipstick color test function
+
+### 1.3 Original Code
 
 I used retrofit + rxjava to send network requests. This way, I can code the network requests by chain style, and it is very convenient for developers to switch threads. Firstly, before the network request, the uploaded bitmap needs to be converted into a base64 format string, and this step takes time to calculate, so it is done in the computation thread. Secondly, the network request is done in the io thread. This can ensure that multiple threads perform their duties, and main thread won't be blocked by time-consuming operations.
 
@@ -225,7 +231,7 @@ public class MakeupActivity extends AppCompatActivity {
 
 ### 2.1 Project Introduction
 
-PlantVsZombie is a game developed in my cocos2d course, inspired by two games that I love very much: Super Mario and Plants vs. Zombies. I created this game by combining Super Mary's game play mechanics and the character skills of Plants vs Zombies. I worked in a four-man team, and I was mainly responsible for game design and cocos2d development.
+PlantVsZombie is a game developed in my cocos2d course, inspired by two games that I love very much: Super Mario and Plants vs. Zombies. I created this game by combining Super Mary's game play mechanics and the character skills of Plants vs Zombies. 
 
 The rule of the game is very simple. Users can press the W/A/D key to move the plant, press the J key to attack zombies, press the K key to switch the plant, press the L key to use the collected sunlight to revive the plant, press Enter/ESC to pause/play the game.
 
@@ -235,7 +241,14 @@ The rule of the game is very simple. Users can press the W/A/D key to move the p
 
 <img src="./assets/images/plantvszombies_level2.png" style="width: 2500px"/>
 
-### 2.2 Original Code
+###2.2 My Contributions
+
+- I worked in a four-man team, and I was mainly responsible for game design and cocos2d development.
+- Designed game mechanics, character mechanics and character attributes
+- Wrote scene initialization code
+- Developed keyboard events for characters
+
+### 2.3 Original Code
 
 The following code mainly shows how I initialize the scene and add keyboard listeners which can perform character movement, character attack, character switch, option box popup event, etc.
 
@@ -700,8 +713,6 @@ void ZVP::boom(Sprite *player) {
 
 Im2hungry is an Android application that I developed in the intern competition during my internship at Tencent. Im2hungry is a food recommendation app based on LBS. We also used AI technology to support the calorie recognition function of food. Our goal is to allow users to choose foods they want to eat nearby when they browse the food posts.
 
-Our team is made up of 10 members, including product manager, UI designer, android developer, back-end developer, test engineer and food recognition algorithm engineer. I am responsible for android development.
-
 <center>
   <video src="./assets/images/im2hungry_video.mov" controls="controls" width="960" height="480" align="center">
   Your browser does not support the video tag.
@@ -709,7 +720,16 @@ Our team is made up of 10 members, including product manager, UI designer, andro
 </center>
 
 <center>Video Introduction Of Im2hungry</center>
-### 3.2 Original Code
+### 3.2 My Contributions
+
+- Our team is made up of 10 members, including product manager, UI designer, android developer, back-end developer, test engineer and food recognition algorithm engineer. I am responsible for the whole android development.
+- Developed login function by using Tencent login SDK.
+- Developed Personal Post Center (ViewPager + GridView).
+- Developed LBS feature by using Tencent Map SDK.
+
+- Developed post publishing and post list features, and debugged network requests with the backend
+
+### 3.3 Original Code
 
 In order to make it easier for users to find delicious food,  I proposed to tthe product manager to include geographic location information in users posts. This proposal was unanimously approved by my team members, and I chose to use Tencent Maps SDK to provide map services.
 
@@ -1292,7 +1312,7 @@ with open('result.txt','w') as fw:
 
 ### 5.1 Project Introduction
 
-Health Helper is my graduation project. As its name suggests, It provides health services. The user only needs to stand on the body fat scale provided by us, and the body fat scale will transmit the user's body data to the his/her mobile phone app through Bluetooth communication. In addition, Health Helper has other main features, including health advice, latest health news, health forum, and instant messaging. In this project I was responsible for the development of the measurement and instant messaging features on the Android-end, and the whole back-end and database development.
+Health Helper is my graduation project. As its name suggests, It provides health services. The user only needs to stand on the body composition scale provided by us, and the body composition scale will send the user's body data to the his/her mobile phone app through Bluetooth communication. In addition, Health Helper has other main features, including health advice, latest health news, health forum, and instant messaging. 
 
 As shown in the following screenshot, various data of the human body are displayed, such as BMI value, body age, visceral fat grade, basal metabolism, fat rate, muscle rate, protein rate, skeletal muscle, etc.
 
@@ -1304,10 +1324,18 @@ As shown in the following screenshot, various data of the human body are display
 <center>chatroom main page</center>
 <center><img src="./assets/images/health_helper_instant_message.png" style="width: 300px"/></center>
 <center>chatroom</center>
+### 5.2 My Contributions
 
-### 5.2 Original Code
+- I worked in a two-man team.In this project I was responsible for the development of the measurement and instant messaging features on the Android-end, and the whole back-end and database development.
+- Connected with body composition scale companies and developed measurement and body report features.
+- Developed instant messaging feature with Tencent IM SDK.
+- Developed backend server using the Express framework in Node.js and deployed it to cloud servers.
 
-The following code shows how to search for a body fat scale device via Bluetooth, pair the device, and connect the device.
+- Developed server-side database storage using Mysql.
+
+### 5.3 Original Code
+
+The following code shows how to search for a body composition scale device via Bluetooth, pair the device, and connect the device.
 
 ```java
 public class MeasureDeviceHolder extends RecyclerView.ViewHolder {
