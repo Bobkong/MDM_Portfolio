@@ -904,7 +904,7 @@ public class LocationSeeActivity extends AppCompatActivity {
 
 ### 4.1 Project Introduction
 
-This experiment uses a random forest algorithm. The data comes from kaggle. The training dataset is given M = 1719692 samples, the sample form is {(X1, y1), (X2, y2) ... (XM, yM)}, where Xj = {xji|i = 1,2, ... N} is a real vector of N = 201 dimensions, yj is 1 or 0, which is the classification label: 1 means the sample is a positive sample, 0 means the sample is a negative sample; The test data set is given M = 429923 samples, and the classification labels of the samples are required.
+This experiment uses a random forest algorithm. The data comes from kaggle. The training dataset is given M = 1719692 samples, the sample form is {(X1, y1), (X2, y2) ... (XM, yM)}, where Xj = {xji, where i = 1,2, ... N} is a real vector of N = 201 dimensions, yj is 1 or 0, which is the classification label: 1 means the sample is a positive sample, 0 means the sample is a negative sample; The test data set is given M = 429923 samples, and the classification labels of the samples are required.
 
 A forest is created randomly. There are many decision trees in the forest. Each decision tree in the random forest is not related to others and is a relatively weak classifier. However, after combining many trees, the forest has a very strong classification ability. When a new input sample enters, let each decision tree in the forest judge separately to see which label this sample should belong to, and then see which label is selected the most, and then make prediction.
 
