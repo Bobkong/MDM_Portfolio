@@ -1,4 +1,4 @@
-# Welcome to my portfolio
+# Welcome to Lingshuang Kong's portfolio
 
 I choose five projects I have done before. I think these five projects can reflect my ability of Android development, back-end development, database development, cocos2d development and python development, and I sort them in chronological order.
 
@@ -18,11 +18,12 @@ The main function of Feca is virtual makeup Users can upload a photo and then tr
 <center>makeup test</center>
 ### 1.2 My Contributions
 
--  I am the leader of a five-man team, product manager and Android developer.
-- Designed product features
-- Built Android project architecture
-- Developed network request module
-- Identified key points of face organs by using Tencent Youtu API and develoeped lipstick color test function
+I am the leader of a five-man team, product manager and Android developer.
+
+- Designed product features.
+- Built Android project architecture.
+- Developed network request module.
+- Identified key points of face organs by using Tencent Youtu API and develoeped lipstick color test function.
 
 ### 1.3 Original Code
 
@@ -241,12 +242,13 @@ The rule of the game is very simple. Users can press the W/A/D key to move the p
 
 <img src="./assets/images/plantvszombies_level2.png" style="width: 2500px"/>
 
-###2.2 My Contributions
+### 2.2 My Contributions
 
-- I worked in a four-man team, and I was mainly responsible for game design and cocos2d development.
-- Designed game mechanics, character mechanics and character attributes
-- Wrote scene initialization code
-- Developed keyboard events for characters
+I worked in a four-man team, and I was mainly responsible for game design and cocos2d development.
+
+- Designed game mechanics, character mechanics and character attributes.
+- Wrote scene initialization code.
+- Developed keyboard events for characters.
 
 ### 2.3 Original Code
 
@@ -722,12 +724,13 @@ Im2hungry is an Android application that I developed in the intern competition d
 <center>Video Introduction Of Im2hungry</center>
 ### 3.2 My Contributions
 
-- Our team is made up of 10 members, including product manager, UI designer, android developer, back-end developer, test engineer and food recognition algorithm engineer. I am responsible for the whole android development.
+Our team is made up of 10 members, including product manager, UI designer, android developer, back-end developer, test engineer and food recognition algorithm engineer. I am responsible for the whole android development.
+
 - Developed login function by using Tencent login SDK.
 - Developed Personal Post Center (ViewPager + GridView).
 - Developed LBS feature by using Tencent Map SDK.
 
-- Developed post publishing and post list features, and debugged network requests with the backend
+- Developed post publishing and post list features, and debugged network requests with the backend.
 
 ### 3.3 Original Code
 
@@ -901,7 +904,7 @@ public class LocationSeeActivity extends AppCompatActivity {
 
 ### 4.1 Project Introduction
 
-This experiment uses a random forest algorithm. The data comes from kaggle. The training dataset is given M = 1719692 samples, the sample form is {(X1, y1), (X2, y2) ... (XM, yM)}, where Xj = {xji | i = 1,2, ... N} is a real vector of N = 201 dimensions, yj is 1 or 0, which is the classification label: 1 means the sample is a positive sample, 0 means the sample is a negative sample; The test data set is given M = 429923 samples, and the classification labels of the samples are required.
+This experiment uses a random forest algorithm. The data comes from kaggle. The training dataset is given M = 1719692 samples, the sample form is {(X1, y1), (X2, y2) ... (XM, yM)}, where Xj = {xji|i = 1,2, ... N} is a real vector of N = 201 dimensions, yj is 1 or 0, which is the classification label: 1 means the sample is a positive sample, 0 means the sample is a negative sample; The test data set is given M = 429923 samples, and the classification labels of the samples are required.
 
 A forest is created randomly. There are many decision trees in the forest. Each decision tree in the random forest is not related to others and is a relatively weak classifier. However, after combining many trees, the forest has a very strong classification ability. When a new input sample enters, let each decision tree in the forest judge separately to see which label this sample should belong to, and then see which label is selected the most, and then make prediction.
 
@@ -1326,7 +1329,8 @@ As shown in the following screenshot, various data of the human body are display
 <center>chatroom</center>
 ### 5.2 My Contributions
 
-- I worked in a two-man team.In this project I was responsible for the development of the measurement and instant messaging features on the Android-end, and the whole back-end and database development.
+I worked in a two-man team.In this project I was responsible for the development of the measurement and instant messaging features on the Android-end, and the whole back-end and database development.
+
 - Connected with body composition scale companies and developed measurement and body report features.
 - Developed instant messaging feature with Tencent IM SDK.
 - Developed backend server using the Express framework in Node.js and deployed it to cloud servers.
