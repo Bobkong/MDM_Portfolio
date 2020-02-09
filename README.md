@@ -1,21 +1,27 @@
 # Welcome to Lingshuang Kong's portfolio
 
-I choose five projects I have done before. I think these five projects can reflect my ability of Android development, back-end development, database development, cocos2d development and python development, and I sort them in chronological order.
+I choose five projects I have done before. I think these five projects can show my skills and knowledge in Android development, back-end development, database development, cocos2d development and python development, and I sort them in chronological order.
+
+**This web page contains videos and pictures.**
 
 ## 1.Feca(Android)
 
 ### 1.1 Project Introduction
 
-Feca is an android software that uses face recognition technology to help users try virtual makeup. I named Feca by changing the position of the letters ‘a’ and ‘e’ of the word “face”, and it means making some changes on your face. It is worth mentioning that I attended the “Catch” National College Students Internet Software Design Contest and my entry is Feca, and I won the first prize in the national final and attracted investment, which was high recognition of Feca.
+Feca is an android software that uses face recognition technology to help users try virtual makeup. I named Feca by changing the position of the letters ‘a’ and ‘e’ of the word “face”, and it means making some changes on your face. 
 
 The main function of Feca is virtual makeup Users can upload a photo and then try different cosmetics such as lipstick, eye shadow, blush, etc. By using Feca, they can figure out what is the best cosmetics for them without going to the mall. Another main function of this software is the makeup forum. In the forum, users can post his/her makeup diary, share the results of using different cosmetics and recommend cosmetics.
 
 <center><img src="./assets/images/feca_poster.jpg" style="width: 300px"/></center>
 <center>Feca poster</center>
-<center><img src="./assets/images/feca_forum.png" style="width: 300px"/></center>
-<center>makeup forum</center>
-<center><img src="./assets/images/feca_test.png" style="width: 300px"/></center>
-<center>makeup test</center>
+
+<center>
+  <video src="./assets/images/feca_video.mp4" controls="controls" width="480" height="960" align="center">
+  Your browser does not support the video tag.
+  </video>
+</center>
+<center>Feca Demo Video</center>
+
 ### 1.2 My Contributions
 
 I am the leader of a five-man team, product manager and Android developer.
@@ -23,7 +29,7 @@ I am the leader of a five-man team, product manager and Android developer.
 - Designed product features.
 - Built Android project architecture.
 - Developed network request module.
-- Identified key points of face organs by using Tencent Youtu API and develoeped lipstick color test function.
+- Recognized key points of the human face by using Tencent Youtu API and develoeped lipstick makeup function.
 
 ### 1.3 Original Code
 
@@ -101,7 +107,7 @@ public class FaceDetectService {
 }
 ```
 
-The following class describes the key points of organs of the human faces in the uploaded photo. You can use the given key points to describe the shape of the organs.
+The following class describes the key points of the human faces in the uploaded photo. You can use the given key points to describe the shape of the mouth, eyes, nose, etc.
 
 ```java
 // network response
@@ -232,9 +238,7 @@ public class MakeupActivity extends AppCompatActivity {
 
 ### 2.1 Project Introduction
 
-PlantVsZombie is a game developed in my cocos2d course, inspired by two games that I love very much: Super Mario and Plants vs. Zombies. I created this game by combining Super Mary's game play mechanics and the character skills of Plants vs Zombies. 
-
-The rule of the game is very simple. Users can press the W/A/D key to move the plant, press the J key to attack zombies, press the K key to switch the plant, press the L key to use the collected sunlight to revive the plant, press Enter/ESC to pause/play the game.
+The rule of this game is very simple. Users can press the W/A/D key to move the plant, press the J key to attack zombies, press the K key to switch the plant, press the L key to use the collected sunlight to revive the plant, press Enter/ESC to pause/play the game.
 
 <img src="./assets/images/plantvszombies_guide.png" style="width: 2500px"/>
 
@@ -246,7 +250,7 @@ The rule of the game is very simple. Users can press the W/A/D key to move the p
 
 I worked in a four-man team, and I was mainly responsible for game design and cocos2d development.
 
-- Designed game mechanics, character mechanics and character attributes.
+- Designed game mechanics, character mechanics and game map.
 - Wrote scene initialization code.
 - Developed keyboard events for characters.
 
@@ -713,7 +717,7 @@ void ZVP::boom(Sprite *player) {
 
 ### 3.1 Project Introduction
 
-Im2hungry is an Android application that I developed in the intern competition during my internship at Tencent. Im2hungry is a food recommendation app based on LBS. We also used AI technology to support the calorie recognition function of food. Our goal is to allow users to choose foods they want to eat nearby when they browse the food posts.
+Im2hungry is a food recommendation app based on LBS. We also used AI technology to support the calorie recognition function of food. Our goal is to allow users to choose foods they want to eat nearby when they browse the food posts.
 
 <center>
   <video src="./assets/images/im2hungry_video.mov" controls="controls" width="960" height="480" align="center">
@@ -722,6 +726,7 @@ Im2hungry is an Android application that I developed in the intern competition d
 </center>
 
 <center>Video Introduction Of Im2hungry</center>
+
 ### 3.2 My Contributions
 
 Our team is made up of 10 members, including product manager, UI designer, android developer, back-end developer, test engineer and food recognition algorithm engineer. I am responsible for the whole android development.
@@ -1315,7 +1320,7 @@ with open('result.txt','w') as fw:
 
 ### 5.1 Project Introduction
 
-Health Helper is my graduation project. As its name suggests, It provides health services. The user only needs to stand on the body composition scale provided by us, and the body composition scale will send the user's body data to the his/her mobile phone app through Bluetooth communication. In addition, Health Helper has other main features, including health advice, latest health news, health forum, and instant messaging. 
+As its name suggests, It provides health services. Users only needs to stand on the body composition scale provided by us, and the body composition scale will send the user's body data to Health Helper through Bluetooth communication. In addition, Health Helper has other main features, including health advice, latest health news, health forum, and instant messaging. 
 
 As shown in the following screenshot, various data of the human body are displayed, such as BMI value, body age, visceral fat grade, basal metabolism, fat rate, muscle rate, protein rate, skeletal muscle, etc.
 
